@@ -70,10 +70,10 @@ void otPlatFree(void *aPtr)
 }
 #endif
 
-#if OPENTHREAD_CONFIG_COPROCESSOR_RPC_ENABLE
-
+#if OPENTHREAD_CONFIG_COPROCESSOR_CLI_ENABLE
 #include <openthread/cli.h>
-#include <openthread/coprocessor_rpc.h>
+#include <openthread/coprocessor_cli.h>
+
 static void               handleHelloWorld(void *aContext, uint8_t aArgsLength, char *aArgs[]);
 static const otCliCommand sCommands[] = {
     {"helloWorld", handleHelloWorld},
@@ -81,8 +81,10 @@ static const otCliCommand sCommands[] = {
 
 static void handleHelloWorld(void *aContext, uint8_t aArgsLength, char *aArgs[])
 {
-    otCRPCOutputFormat("Hello World!\n");
+    otCliOutputFormat("Hello World!\n");
 }
+
+
 
 #endif
 
@@ -132,9 +134,9 @@ pseudo_reset:
 
     otAppNcpInit(instance);
 
-#if OPENTHREAD_CONFIG_COPROCESSOR_RPC_ENABLE
-    otCRPCSetUserCommands(sCommands, OT_ARRAY_LENGTH(sCommands), instance);
-#endif
+    // Init CLI
+    otCliInit(instance, otCoprocessorCliOutputCallback, instance);
+    otCliSetUserCommands(sCommands, OT_ARRAY_LENGTH(sCommands), instance);
 
     while (!otSysPseudoResetWasRequested())
     {

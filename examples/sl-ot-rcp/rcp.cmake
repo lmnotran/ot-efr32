@@ -34,6 +34,7 @@ add_executable(sl-ot-rcp
 target_include_directories(sl-ot-rcp PRIVATE ${COMMON_INCLUDES})
 
 target_link_libraries(sl-ot-rcp PRIVATE
+    openthread-cli-core
     openthread-rcp
     ${OT_PLATFORM_LIB}
     openthread-radio

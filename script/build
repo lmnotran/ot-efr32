@@ -110,8 +110,8 @@ main()
             OT_CMAKE_NINJA_TARGET=("ot-rcp" "sl-ot-rcp")
             ;;
         efr32mg12)
-            OT_CMAKE_NINJA_TARGET=("ot-rcp" "ot-cli-ftd" "ot-cli-mtd" "ot-ncp-ftd" "ot-ncp-mtd" "sl-ot-rcp")
-            OT_CMAKE_NINJA_TARGET+=("sleepy-demo-ftd" "sleepy-demo-mtd")
+            OT_CMAKE_NINJA_TARGET=("sl-ot-rcp")
+            # OT_CMAKE_NINJA_TARGET+=("sleepy-demo-ftd" "sleepy-demo-mtd")
             ;;
         efr32mg13)
             OT_CMAKE_NINJA_TARGET=("ot-rcp" "ot-cli-ftd" "ot-cli-mtd" "ot-ncp-ftd" "ot-ncp-mtd" "sl-ot-rcp")

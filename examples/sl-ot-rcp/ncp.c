@@ -29,7 +29,7 @@
 #include "openthread-core-config.h"
 
 #include <openthread/ncp.h>
-#include <openthread/coprocessor_rpc.h>
+// #include <openthread/coprocessor_rpc.h>
 
 #include "common/code_utils.hpp"
 

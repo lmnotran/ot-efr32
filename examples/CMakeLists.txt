@@ -35,3 +35,12 @@ if(EFR32_APP_SLEEPY_DEMO)
     add_subdirectory(sleepy-demo)
 endif()
 
+# ==============================================================================
+# sl-ot-rcp
+# ==============================================================================
+option(EFR32_APP_SL_OT_RCP "enable sl-ot-rcp app" ON)
+
+if(EFR32_APP_SL_OT_RCP)
+    add_subdirectory(sl-ot-rcp)
+endif()
+
