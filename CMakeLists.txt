@@ -29,6 +29,7 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(ot-efr32 VERSION 0.2.0)
 
+set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "default build type: Debug" FORCE)
 set(EFR32_PLATFORM_VALUES
     "efr32mg1"
     "efr32mg12"

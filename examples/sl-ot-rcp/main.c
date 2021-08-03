@@ -73,18 +73,11 @@ void otPlatFree(void *aPtr)
 #if OPENTHREAD_CONFIG_COPROCESSOR_CLI_ENABLE
 #include <openthread/cli.h>
 #include <openthread/coprocessor_cli.h>
+#include "example_cli.h"
 
-static void               handleHelloWorld(void *aContext, uint8_t aArgsLength, char *aArgs[]);
 static const otCliCommand sCommands[] = {
-    {"helloWorld", handleHelloWorld},
+    {"example", exampleCliCommand},
 };
-
-static void handleHelloWorld(void *aContext, uint8_t aArgsLength, char *aArgs[])
-{
-    otCliOutputFormat("Hello World!\n");
-}
-
-
 
 #endif
 

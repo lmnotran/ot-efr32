@@ -29,6 +29,7 @@
 add_executable(sl-ot-rcp
     main.c
     ncp.c
+    example_cli.c
 )
 
 target_include_directories(sl-ot-rcp PRIVATE ${COMMON_INCLUDES})
