@@ -129,7 +129,7 @@ pseudo_reset:
 
     // Init CLI
     otCliInit(instance, otCoprocessorCliOutputCallback, instance);
-    otCliSetUserCommands(sCommands, OT_ARRAY_LENGTH(sCommands), instance);
+    otCoprocessorCliSetUserCommands(sCommands, OT_ARRAY_LENGTH(sCommands), instance);
 
     while (!otSysPseudoResetWasRequested())
     {
