@@ -75,7 +75,7 @@ static void helpCommand(void *aContext, uint8_t aArgsLength, char *aArgs[])
 
 void exampleCliCommand(void *aContext, uint8_t aArgsLength, char *aArgs[])
 {
-    otError error = otCoprocessorCliHandleCommand(aContext, aArgsLength, aArgs, OT_ARRAY_LENGTH(exampleCommands), exampleCommands);
+    otError error = otCliHandleCommand(aContext, aArgsLength, aArgs, OT_ARRAY_LENGTH(exampleCommands), exampleCommands);
 
     if (error == OT_ERROR_INVALID_COMMAND)
     {

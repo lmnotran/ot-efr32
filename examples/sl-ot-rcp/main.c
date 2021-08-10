@@ -127,9 +127,11 @@ pseudo_reset:
 
     otAppNcpInit(instance);
 
+#if OPENTHREAD_CONFIG_COPROCESSOR_CLI_ENABLE
     // Init CLI
     otCliInit(instance, otCoprocessorCliOutputCallback, instance);
     otCoprocessorCliSetUserCommands(sCommands, OT_ARRAY_LENGTH(sCommands), instance);
+#endif
 
     while (!otSysPseudoResetWasRequested())
     {
