@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.silabs.com/ss/ContentItem.ecore">
+  <contentItemData label="Matter Release Notes" itemURI="https://github.com/openthread/ot-efr32/releases" category="Release Notes" priority="40">
+    <property key="core.category" value="Release Notes"/>
+    <property key="core.priority" value="40"/>
+    <property key="core.partCompatibility" value=".*efr32mg.*"/>
+    <property key="core.sdkAndProtocolTags" value="OpenThread"/>
+    <description>Release Notes for the ot-efr32. These release notes provide information on the release including part compatibility, changes and added/deleted/deprecated features/API.</description>
+  </contentItemData>
+</contentItems>
