@@ -1,0 +1,17 @@
+# This is an example of an SLC SDK extension.
+#
+# By creating an SDK extension, a vendor is able to define components that are
+# available for use when generating a SLC project.
+#
+# See this page for more details
+# https://siliconlabs.github.io/slc-specification/latest/format/extension/
+
+id: eero
+version: 0.0.1
+description: "eero extension for Gecko SDK Suite"
+label: "Example Vendor extension"
+sdk:
+  id: gecko_sdk
+  version: 4.2.1
+component_path:
+  - path: component
