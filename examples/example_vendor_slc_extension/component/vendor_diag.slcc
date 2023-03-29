@@ -1,0 +1,20 @@
+# See this page for documentation on how to define your own .slcc component file
+# https://siliconlabs.github.io/slc-specification/latest/format/component/
+
+id: vendor_diag
+label: Example Vendor Component
+package: Vendor
+category: Vendor
+quality: production
+description: This is an example component that adds vendor-specific sources
+provides:
+  - name: vendor_diag
+
+
+# The paths below are relative to the root of this repo
+include:
+  - path: src
+    file_list:
+      - path: diag.h
+source:
+      - path: src/diag.c

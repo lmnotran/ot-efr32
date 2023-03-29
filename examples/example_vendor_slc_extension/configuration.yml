@@ -1,0 +1,7 @@
+# Target board
+board: brd4161a
+
+# SLCP locations
+rcp_uart_slcp: "./projects/example-vendor-rcp-uart.slcp"
+rcp_spi_slcp: "./projects/example-vendor-rcp-spi.slcp"
+soc_slcp: "./projects/example-vendor-soc.slcp"

@@ -1,0 +1,24 @@
+# See this page for documentation on how to define your own .slcc component file
+# https://siliconlabs.github.io/slc-specification/latest/format/component/
+
+id: my_custom_board
+label: Example Vendor Board
+package: Vendor
+category: Vendor
+quality: production
+description: This is an example component that adds vendor-specific sources
+provides:
+  - name: my_custom_board
+requires:
+  - efr32mg1p232f256gm48
+
+# Set the root path for all relative paths in this component.
+# The value of root_path is relative to the root of this repo
+root_path: example_vendor
+
+include:
+  - path: src
+    file_list:
+      - path: diag.h
+source:
+      - path: src/diag.c
